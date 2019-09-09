@@ -1,8 +1,7 @@
 .hero {
   position: relative;
   margin: 0 auto;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  height: 90vh;
 
   .logo {
     height: 80px;
