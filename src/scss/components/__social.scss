@@ -1,0 +1,53 @@
+.social {
+  padding: 0;
+  @include flex(center, center);
+
+  .hero & {
+    @include flex(left, center);
+    @include spacing(4px);
+    margin-bottom: 30px;
+  }
+
+  .footer & {
+    @include flex(left, center);
+    @include spacing(3px);
+  }
+
+  & > li {
+    list-style-type: none;
+  }
+
+  &-link {
+    @include flex(center, center);
+  }
+
+  .hero &-size {
+    @include wrap(40px, 40px, 10px, 50%);
+    background-color: $color-button;
+    @include flex(center, center);
+    border: $element-border;
+
+    &:hover {
+      background-color: $color-secondary;
+    }
+
+    @media screen and (min-width: 480px) {
+      @include wrap(25px, 25px, 5px, 50%);
+    }
+
+    @media screen and (min-width: 640px) {
+      @include wrap(30px, 30px, 6px, 50%);
+    }
+  }
+
+  .footer &-size {
+    @include wrap(40px, 40px, 10px, 50%);
+    background-color: $color-button;
+    border: $element-border;
+    @include flex(center, center);
+
+    &:hover {
+      background-color: $color-secondary;
+    }
+  }
+}

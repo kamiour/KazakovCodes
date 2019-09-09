@@ -1,0 +1,102 @@
+.header-navigation {
+  display: none;
+  @include font(12px, 600, 18px);
+  @include spacing(4px);
+
+  @media screen and (min-width: 640px) {
+    & {
+      @include flex(center, center);
+      flex-wrap: wrap;
+      @include font(14px, 400, 1.4);
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    & {
+      @include spacing(10px);
+    }
+  }
+}
+
+.nav-wrap {
+  @include flex(center, center);
+  margin: 4px 0;
+}
+  
+.nav-item {
+  padding: 9px;
+  color: $color-additional-light;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: 5px;
+
+  &:hover {
+    color: $color-additional-light;
+    border: 2px solid $color-additional-light;
+  }
+
+  &.isactive {
+    color: $color-secondary;
+    border: 2px solid $color-secondary;
+
+    &:hover {
+      color: $color-secondary;
+      border: 2px solid $color-secondary;
+    }
+  }
+
+  &-mob{
+    display: block;
+    color: $color-reverse;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    @include font(14px, 400, 1.4);
+
+    &:hover {
+      background-color: $color-reverse;
+      color: $color-main;
+      border: 1px solid $color-secondary;
+      text-decoration: none;
+    }
+  }
+}
+
+.nav-mobile {
+  position: relative;
+  
+  ul {
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    right: 0;
+    padding: 8px;
+    margin: 0;
+    width: 135px;
+    border-radius: 3px;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 640px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+ul li{
+  padding: 0;
+}
+
+.burger-button {
+  @include flex(center, center);
+  margin: 0;
+}

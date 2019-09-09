@@ -1,0 +1,194 @@
+.hero {
+  position: relative;
+  margin: 0 auto;
+
+  .logo {
+    height: 80px;
+    margin: 0;
+
+    @media screen and (min-width: 640px) {
+      & {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    @media screen and (min-width: 960px) {
+      & {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    &-wrap {
+      @include flex(center, center);
+      margin-bottom: 35px;
+
+      @media screen and (min-width: 640px) {
+        & {
+          margin-bottom: 42px;
+        }
+      }
+    }
+  }
+
+  &-wrap {
+    padding: 80px 0 130px 0;
+    height: 100%;
+
+    @media screen and (min-width: 640px) {
+      padding: 120px 0 165px 0;
+    }
+
+    @media screen and (min-width: 960px) {
+      padding: 250px 0 300px 0;
+    }
+
+    .container {
+      height: 100%;
+    }
+  }
+
+  &-layout {
+    @include flex(center, flex-start);
+    flex-direction: column;
+    height: 100%;
+    max-width: 230px;
+
+    & > * {
+      width: 100%;
+    }
+
+    @media screen and (min-width: 640px) {
+      & {
+        max-width: 650px;
+        margin: 0;
+      }
+    }
+  }
+
+  &-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+    margin: 0;
+
+    .img {
+      object-position: 50% 50%;
+
+      &.img-2 {
+        object-position: 45% 50%;
+
+        @media screen and (min-width: 480px) {
+          object-position: 50% 50%;
+        }
+      }
+
+      &.img-3 {
+        object-position: 60% 50%;
+
+        @media screen and (min-width: 480px) {
+          object-position: 50% 50%;
+        }
+      }
+    }
+  }
+
+  &-overlay {
+    @include overlay(-1, $color-overlay-dark, 0.5);
+  }
+
+  &-spacing {
+    flex-grow: 1;
+  }
+
+  &-textarea {
+    background-color: $color-button;
+    padding: 15px 10px;
+    border-radius: 5px;
+    text-align: left;
+    color: $color-main;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 640px) {
+      text-align: left;
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 960px) {
+      text-align: left;
+      margin-bottom: 100px;
+    }
+
+    .hero-title {
+      @include font(18px, 600, 30px);
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: $color-reverse;
+      text-transform: uppercase;
+
+      @media screen and (min-width: 480px) {
+        & {
+          @include font(25px, 600, 44px);
+          margin-bottom: 40px;
+        }
+      }
+
+      @media screen and (min-width: 960px) {
+        & {
+          @include font(36px, 700, 42px);
+          margin-bottom: 31px;
+        }
+      }
+    }
+
+    .hero-subtitle {
+      @include font(16px, 400, 22px);
+      color: $color-reverse;
+      margin-top: 0;
+
+      @media screen and (min-width: 480px) {
+        & {
+          @include font(17px, 400, 27px);
+        }
+      }
+
+      @media screen and (min-width: 960px) {
+        & {
+          @include font(16px, 400, 26px);
+        }
+      }
+    }
+    
+    .hero-description {
+      @include font(14px, 400, 22px);
+      color: $color-additional;
+      margin-top: 0;
+
+      @media screen and (min-width: 480px) {
+        & {
+          @include font(17px, 400, 27px);
+        }
+      }
+
+      @media screen and (min-width: 960px) {
+        & {
+          @include font(16px, 400, 26px);
+        }
+      }
+    }
+  }
+
+  &-link {
+    color: $color-additional;
+    line-height: 1;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

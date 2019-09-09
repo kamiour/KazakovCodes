@@ -1,0 +1,198 @@
+.section {
+  padding: 0 0 30px 0;
+  margin: 0;
+  position: relative;
+  background-color: $color-additional-light;
+
+  &-overlay {
+    @include overlay(-1, transparent, 1);
+    background-image: linear-gradient(180deg, $color-bg-black, $color-bg-black, rgba($color-bg-black, 0.9), rgba($color-bg-black, 0.5), $color-bg-black);
+
+    .section-portfolio & {
+      background-image: linear-gradient(180deg, $color-bg-black, $color-bg-black, rgba($color-bg-black, 0.8), rgba($color-bg-black, 0.7), $color-bg-black);
+    }
+  }
+
+  &-reverse {
+    background-color: $color-bg-black;
+
+    .section-title {
+      color: $color-reverse;
+    }
+
+    .section-subtitle {
+      color: $color-additional-light;
+    }
+  }
+
+  &-experience, &-portfolio {
+    background-color: transparent;
+  }
+
+  &-layout {
+    @include flex(center, stretch);
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 480px) {
+      @include spacing(10px);
+    }
+  }
+
+  &-header {
+    width: 100%;
+    @include flex(center, flex-start);
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  
+  &-title {
+    @include font(24px, 700, 36px);
+    margin-top: 10px;
+    margin-bottom: 45px;
+    padding-left: 12px;
+    border-left: 8px solid $color-secondary;
+    text-align: left;
+
+    @media screen and (min-width: 480px) {
+      & {
+        margin-bottom: 42px;
+      }
+    }
+
+    @media screen and (min-width: 640px) {
+      & {
+        @include font(28px, 700, 38px);
+        margin-bottom: 50px;
+      }
+    }
+
+    @media screen and (min-width: 960px) {
+      & {
+        @include font(36px, 700, 36px);
+        margin-bottom: 63px;
+      }
+    }
+
+    &.title-reverse {
+      color: $color-reverse;
+    }
+  }
+
+  &-subtitle {
+    text-transform: uppercase;
+    @include font(20px, 700, 30px);
+
+    @media screen and (min-width: 960px) {
+      .section-contact & {
+        margin-top: 30px;
+        margin-bottom: 28px;
+      }
+    } 
+  }
+
+  &-description {
+    @include font(14px, 400, 20px);
+    color: $color-additional;
+    margin: 0;
+    text-align: left;
+
+    @media screen and (min-width: 640px) {
+      & {
+        @include font(15px, 400, 26px);
+      }
+    }
+
+    @media screen and (min-width: 960px) {
+      & {
+        @include font(16px, 400, 26px);
+        margin: 0;
+      }
+    }
+
+    .section-portfolio & {
+      text-align: center;
+    }
+  }
+
+  &-media {
+    position: relative;
+
+    @media screen and (min-width: 480px) {
+      & {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &-clients {
+    .list-clients {
+      @include flex(space-around, center);
+      list-style-type: none;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      @include spacing(12px);
+
+      & li {
+      @include flex(center, center);
+      margin-bottom: 24px;
+      }
+    }  
+  }
+}
+
+.col {
+  margin: 0;
+  min-height: 1px;
+  margin-bottom: 15px;
+
+  .section-skills & {
+    margin-bottom: 20px;
+  }
+
+  &.skill {
+    transition-duration: 0.5s;
+  }
+
+  .section-portfolio & {
+    margin-bottom: 30px;
+  }
+
+  .section-experience & {
+    margin-bottom: 0;
+  }
+
+  &.col-right {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .section-hobbies & {
+    margin-bottom: 0;
+  }
+}
+
+.icon-size {
+  @include wrap(10px, 10px, 0, 0);
+}
+
+.display-toggle {
+  transition-duration: 0.2s;
+  
+  &.hidden {
+    display: none;
+  }
+  
+  &.visuallyhidden {
+    opacity: 0;
+  }
+
+  &.invisible {
+    display: none;
+  }
+}
+
+.bg-dark {
+  background-color: $color-bg-dark;
+}

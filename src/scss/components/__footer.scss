@@ -1,0 +1,54 @@
+.footer {
+    padding: 20px 0;
+    background-color: $color-bg-black;
+
+    @media screen and (min-width: 480px) {
+      & {
+        padding: 25px 0;
+      }
+    }
+
+    @media screen and (min-width: 640px) {
+      & {
+        padding: 30px 0;
+      }
+    }
+
+
+    &-layout {
+        @include flex(space-between, stretch);
+        @include spacing(8px);
+        padding: 0;
+    }
+
+    &-left {
+      @include flex(left, center);
+    }
+    
+    &-right {
+      @include flex(right, center);
+    }
+  
+    &-h {
+      @include font(12px, 400, 18px);
+      color: $color-additional-light;
+      margin: 0;
+
+      @media screen and (min-width: 640px) {
+        & {
+          @include font(14px, 400, 20px);
+        }
+      }
+
+      @media screen and (min-width: 960px) {
+        & {
+          @include font(16px, 400, 26px);
+        }
+      }
+    }
+  
+  }
+  
+  
+  
+  

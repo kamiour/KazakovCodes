@@ -1,0 +1,94 @@
+.contacts {
+  @include font(14px, 600, 20px);
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+  background-color: $color-button;
+  padding: 15px 10px;
+  border-radius: 5px;
+
+  & a {
+    @include font(14px, 300, 18px);
+  }
+
+  & > li {
+    color: $color-reverse;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 10px;
+    @include font(0, 600, 1.4);
+    padding: 0;
+    padding-left: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-list {
+    color: $color-additional;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  
+    .footer & {
+      color: $color-reverse;
+    }
+  }
+
+  &-title {
+    color: black;
+    @include font(16px, 600, 24px);
+    text-align: left;
+    margin-bottom: 15px;
+
+    @media screen and (min-width: 960px) {
+      & {
+        @include font(24px, 600, 34px);
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.detail-list {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+  
+.contact-icon::before {
+  display: inline-block;
+  width: 25px;
+  padding-right: 10px;
+  margin-left: -25px;
+  vertical-align: top;
+}
+  
+.phone-icon::before {
+  content: url(../../images/icons/phone-white.svg);
+}
+
+.marker-icon::before {
+  content: url(../../images/icons/marker.svg);
+}
+
+.message-icon::before {
+  content: url(../../images/icons/message.svg);
+}
+
+.skype-icon::before {
+  content: url(../../images/icons/skype.svg);
+}
+
+.telegram-icon::before {
+  content: url(../../images/icons/telegram.svg);
+}
+
+.calendar-icon::before {
+  content: url(../../images/icons/calendar.svg);
+}
