@@ -50,16 +50,16 @@
   &-mob{
     display: block;
     color: $color-reverse;
-    padding: 8px;
+    padding: 6px;
     text-decoration: none;
     border-radius: 3px;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     @include font(14px, 400, 1.4);
 
     &:hover {
-      background-color: $color-reverse;
-      color: $color-main;
-      border: 1px solid $color-secondary;
+      background-color: transparent;
+      color: $color-reverse;
+      border: $element-border;
       text-decoration: none;
     }
   }
@@ -70,11 +70,12 @@
   
   ul {
     display: none;
+    background-color: $color-menu;
     list-style-type: none;
     position: absolute;
     z-index: 100;
-    top: 100%;
-    right: 0;
+    top: -226px;
+    right: -30px;
     padding: 8px;
     margin: 0;
     width: 135px;
