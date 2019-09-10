@@ -80,14 +80,14 @@
 
   &-skills {
     width: 100%;
-    padding: 15px;
+    padding: 10px 6px;
     flex-direction: row;
     flex-wrap: wrap;
     background-color: $color-reverse;
     box-shadow: 0 8px 28px rgba(6,6,90,.07);
     border-radius: 8px;
     transition-duration: 0.3s;
-    @include spacing(6px);
+    @include spacing(8px);
 
     @media screen and (min-width: 480px) {
       flex-direction: column;
@@ -221,8 +221,9 @@
     }
 
     .card-skills & {
-      @include font(15px, 600, 22px);
+      @include font(14px, 600, 20px);
       text-align: left;
+      margin-bottom: 6px;
 
       @media screen and (min-width: 480px) {
         @include font(15px, 600, 24px);
@@ -283,7 +284,7 @@
     }
 
     .card-skills & {
-      @include font(13px, 400, 20px);
+      @include font(12px, 400, 18px);
       color: $color-additional-dark;
       text-align: left;
 

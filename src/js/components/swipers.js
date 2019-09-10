@@ -6,6 +6,7 @@ var swiperhero = new Swiper('.swiper-hero', {
 autoplay: {
   delay: 3500,
 },
+loop: true,
 roundLengths: true,
 autoHeight: false,
 slidesPerView: 1,

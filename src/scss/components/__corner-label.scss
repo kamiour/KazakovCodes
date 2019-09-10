@@ -1,0 +1,36 @@
+@function sqrt($r) {
+  $x0: 1;
+  $x1: $x0;
+  @for $i from 1 through 10 {
+    $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+    $x0: $x1;
+  }
+  @return $x1;
+}
+
+$cornerwidth: 60px;
+
+.c-corner-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-style: solid;
+  border-color: transparent $color-secondary transparent transparent;
+  border-color: rgba(255, 255, 255, 0) $color-secondary rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+  height: 0;
+  width: 0;
+  border-width: 0 $cornerwidth $cornerwidth 0;
+}
+.c-corner-label__text {
+  color: #eee;
+  font-size: $cornerwidth/5;
+  font-weight: bold;
+  position: relative;
+  left: -$cornerwidth*0.065;
+  top: $cornerwidth*0.16;
+  white-space: nowrap;
+  transform: rotate(45deg);
+  width: $cornerwidth*sqrt(2);
+  text-align: center;
+  line-height: 2em;
+}
