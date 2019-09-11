@@ -76,7 +76,7 @@
       object-position: 50% 50%;
 
       &.img-2 {
-        object-position: 45% 50%;
+        object-position: 60% 50%;
 
         @media screen and (min-width: 480px) {
           object-position: 50% 50%;
@@ -84,10 +84,10 @@
       }
 
       &.img-3 {
-        object-position: 60% 50%;
+        object-position: 45% 50%;
 
         @media screen and (min-width: 480px) {
-          object-position: 50% 50%;
+          object-position: top;
         }
       }
     }
