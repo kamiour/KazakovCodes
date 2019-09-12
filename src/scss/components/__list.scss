@@ -10,6 +10,10 @@
     &:hover {
       text-decoration: underline;
     }
+
+    .section-story & {
+      color: $color-secondary;
+    }
   }
 
   & > li {
@@ -24,15 +28,19 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    .section-story & {
+      margin-bottom: 18px;
+    }
   }
 }
   
 .list-item::before {
   display: inline-block;
-  width: 25px;
+  width: 28px;
   padding-right: 10px;
   margin-left: -25px;
-  vertical-align: top;
+  vertical-align: text-top;
 }
   
 .phone-icon::before {
@@ -56,7 +64,27 @@
 }
 
 .calendar-icon::before {
-  content: url(../../images/icons/calendar.svg);
+  content: url(../../images/development/calendar.svg);
+}
+
+.time-icon::before {
+  content: url(../../images/development/time.svg);
+}
+
+.mentor-icon::before {
+  content: url(../../images/development/mentor.svg);
+}
+
+.cert-icon::before {
+  content: url(../../images/development/cert.svg);
+}
+
+.course-icon::before {
+  content: url(../../images/development/course.svg);
+}
+
+.goal-icon::before {
+  content: url(../../images/development/goal.svg);
 }
 
 .hero-list {

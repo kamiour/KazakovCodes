@@ -88,17 +88,17 @@
       }
 
       &.img-3 {
-        object-position: 45% 50%;
+        object-position: 52% bottom;
 
         @media screen and (min-width: 480px) {
-          object-position: top;
+          object-position: bottom;
         }
       }
     }
   }
 
   &-overlay {
-    @include overlay(-1, $color-overlay-dark, 0.5);
+    @include overlay(-1, $color-overlay-dark, 0.6);
   }
 
   &-spacing {
