@@ -27,7 +27,7 @@ $cornerwidth: 80px;
   }
 }
 .c-corner-label__text {
-  color: #eee;
+  color: $color-reverse;
   font-size: $cornerwidth/6;
   font-weight: bold;
   position: relative;
