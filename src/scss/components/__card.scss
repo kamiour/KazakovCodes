@@ -37,8 +37,8 @@
       flex-grow: 1;
       
       .figure-plus {
-        width: 40px;
-        height: 40px;
+        width: 45px;
+        height: 45px;
         border-radius: 50%;
         border: $element-border;
         padding: 8px;
@@ -48,7 +48,7 @@
     }
 
     .card-foreground-footer {
-      padding: 10px;
+      padding: 12px;
       width: 100%;
       @include flex(center, center);
       flex-direction: column;
@@ -196,6 +196,8 @@
 
     .card-portfolio & {
       @include font(13px, 600, 1);
+      letter-spacing: 2px;
+      @include flex(center, center);
     }
 
     @media screen and (min-width: 480px) {
@@ -304,7 +306,7 @@
 
     .card-portfolio & {
       color: $color-additional-light;
-      @include font(11px, 600, 1.4);
+      @include font(12px, 400, 1.6);
     }
   }
 

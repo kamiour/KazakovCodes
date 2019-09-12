@@ -70,25 +70,21 @@
 }
   
 .phone-icon::before {
-  content: url(../../images/icons/phone-white.svg);
+  content: url(../images/icons/phone-white.svg);
 }
 
 .marker-icon::before {
-  content: url(../../images/icons/marker.svg);
+  content: url(../images/icons/marker.svg);
 }
 
 .message-icon::before {
-  content: url(../../images/icons/message.svg);
+  content: url(../images/icons/message.svg);
 }
 
 .skype-icon::before {
-  content: url(../../images/icons/skype.svg);
+  content: url(../images/icons/skype.svg);
 }
 
 .telegram-icon::before {
-  content: url(../../images/icons/telegram.svg);
-}
-
-.calendar-icon::before {
-  content: url(../../images/icons/calendar.svg);
+  content: url(../images/icons/telegram.svg);
 }

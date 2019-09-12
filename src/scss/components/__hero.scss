@@ -98,7 +98,7 @@
   }
 
   &-overlay {
-    @include overlay(-1, $color-overlay-dark, 0.6);
+    @include overlay(-1, $color-overlay-dark, 0.45);
   }
 
   &-spacing {

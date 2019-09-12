@@ -41,18 +41,6 @@ body {
   @include flex(center, center);
 }
 
-.bg-secondary {
-  background-color: $color-secondary;
-}
-
-.bg-additional {
-  background-color: $color-additional;
-}
-
-.font-secondary {
-  font-family: 'Quattrocento Sans', sans-serif;
-}
-
 .bold {
   font-weight: 600;
 }

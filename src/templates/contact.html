@@ -13,26 +13,27 @@
   </div>
   <article class="section-body">
     <div class="container">
-      <form class="form" action="" method="">
+      <form class="form" action="http://formspree.io/kamiournew@gmail.com" method="POST">
         <div class="form-layout">
           <div class="col-12 col-6s">
+            <input type="hidden" name="_subject" value="KazakovCodes New Submission"/>
             <div class="form-input">
               <h2 class="form-subtitle font-secondary">Your Name</h2>
-              <input class="form-style" type="text" autocomplete="on" name="name">
+              <input class="form-style" type="text" name="name" autocomplete="on">
             </div>
           </div>
           <div class="col-12 col-6s">
             <div class="form-input">
               <h2 class="form-subtitle font-secondary">Your Email</h2>
-              <input class="form-style" type="email" autocomplete="on" name="email">
+              <input class="form-style" type="email" name="_replyto" autocomplete="on">
             </div>
           </div>
           <div class="form-area col-12 form-area-message">
             <h2 class="form-subtitle font-secondary">Your Message</h2>
-            <textarea class="form-style form-textarea" name="comment"></textarea>
+            <textarea name="body" class="form-style form-textarea"></textarea>
           </div>
           <div class="button-wrap col-12">
-            <a href="#send" class="button button-reverse">Send Message</a>
+            <input type="submit" value="Send Message" href="#send" class="button button-reverse">
           </div>
         </div>
       </form>
