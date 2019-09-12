@@ -8,7 +8,7 @@ $(document).ready(function(){
   //= components/burger.js
   //= components/button-expand.js
   //= components/nav-item.js
-  //= components/hero-button.js
+  //= components/button-scroll.js
   //= components/tab.js
 })
 

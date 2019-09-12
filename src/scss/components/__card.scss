@@ -84,7 +84,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     background-color: $color-reverse;
-    box-shadow: 0 8px 28px rgba(6,6,90,.07);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.3);
     border-radius: 8px;
     transition-duration: 0.3s;
     @include spacing(8px);
@@ -113,7 +113,7 @@
     @include flex(center, flex-start);
     border-radius: 8px;
     padding: 12px 10px;
-    background-color: $color-label-hover;
+    background-color: $color-card-hover;
     margin-left: 25px;
     border: $element-border;
 
@@ -284,13 +284,12 @@
     }
 
     .card-skills & {
-      @include font(12px, 400, 18px);
+      @include font(12px, 400, 20px);
       color: $color-additional-dark;
       text-align: left;
 
       @media screen and (min-width: 480px) {
         @include font(13px, 400, 20px);
-        text-align: center;
       }
 
       @media screen and (min-width: 960px) {

@@ -10,8 +10,8 @@
 }
 
 .vert-line {
-  position: absolute;
   height: 100%;
+  min-height: 40px;
   display: inline-block;
   vertical-align: middle;
   width: 3px;
@@ -28,12 +28,32 @@
   }
 }
 
+.dot {
+  position: absolute;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $color-reverse;
+
+  &.dot-start {
+    transform: translateY(50%);
+  }
+  
+  &.dot-end {
+    top: 0;
+    transform: translateY(-50%);
+  }
+}
+
 .career-icon-flag {
+  position: absolute;
   width: 40px;
   margin: 0;
   @include flex(center, center);
   transform-origin: bottom center;
-  transform: translate(20%, 15%) rotate(15deg);
 
   &.swing {
     animation: swing 2s infinite;
@@ -50,10 +70,31 @@
       transform: translate(20%, 15%) rotate(15deg) rotateY(0deg);
     }
   }
-}
+
+  &.finish {
+    top: 0;
+  }
+  
+  &.finish.swing-end {
+    animation: swing-end 2s infinite;
+  }
+  
+  @keyframes swing-end {
+    0% {
+      transform: translate(20%, -90%) rotate(15deg) rotateY(0deg);
+    }
+    60% {
+      transform: translate(11%, -90%) rotate(30deg) rotateY(30deg);
+    }
+    100% {
+      transform: translate(20%, -90%) rotate(15deg) rotateY(0deg);
+    }
+  }
+} 
 
 .career-icon-up {
-  width: 15px;
+  position: absolute;
+  width: 14px;
   margin: 0;
   @include flex(center, center);
   transform-origin: center center;
@@ -67,16 +108,17 @@
       transform: translate(85%) translateY(0);
     }
     40% {
-      transform: translate(85%) translateY(-10px);
+      transform: translate(90%) translateY(-10px);
     }
     60% {
-      transform: translate(85%) translateY(-5px);
+      transform: translate(90%) translateY(-5px);
     }
   }
 }
 
 .career-icon-new {
-  width: 20px;
+  position: absolute;
+  width: 16px;
   margin: 0;
   @include flex(center, center);
   transform-origin: center center;
@@ -87,10 +129,10 @@
   
   @keyframes rotate {
     from {
-      transform: translate(85%) rotate(0deg);
+      transform: translate(105%) rotate(0deg);
     }
     to {
-      transform: translate(85%) rotate(359deg);
+      transform: translate(105%) rotate(359deg);
     }
   }
 }
