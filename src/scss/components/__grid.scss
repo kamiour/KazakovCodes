@@ -20,28 +20,6 @@
     }
   }
 
-  .section-team & {
-    @include spacing(5px);
-
-    @media screen and (min-width: 480px) {
-      & {
-        @include spacing(8px);
-      }
-    }
-
-    @media screen and (min-width: 640px) {
-      & {
-        @include spacing(10px);
-      }
-    }
-
-    @media screen and (min-width: 640px) {
-      & {
-        @include spacing(15px);
-      }
-    }
-  }
-
   .section-skills & {
     @include spacing(0px);
 

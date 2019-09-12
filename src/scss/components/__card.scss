@@ -26,6 +26,7 @@
   &-portfolio {
     border-radius: 5px;
     transition-duration: 0.3s;
+    overflow: hidden;
 
     &:hover {
       transform: scale(1.05);
@@ -66,10 +67,6 @@
           padding: 15px;
           @include flex(left, center);
         }
-      }
-
-      .card-title {
-        color: $color-reverse;
       }
 
       .portfolio-link {
@@ -139,7 +136,7 @@
       color: lighten($color-additional-dark, 20%);
     }
 
-    &.card-promotion, &.card-side {
+    &.card-promotion {
       margin-left: 60px;
 
       .corner-down {
@@ -166,11 +163,6 @@
         border-left: $element-border;
       }
     }
-
-    &.card-side {
-      margin-left: 60px;
-      background-color: $color-additional-light;
-    }
   }
 
   &-hobbies {
@@ -180,7 +172,6 @@
     }
   }
   
-
   &-background {
     margin: 0;
     width: 100%;
@@ -218,6 +209,7 @@
 
     .card-portfolio & {
       @include font(13px, 600, 1);
+      color: $color-reverse;
       letter-spacing: 2px;
       @include flex(center, center);
     }
@@ -263,10 +255,6 @@
       text-align: left;
       @include font(13px, 600, 22px);
       margin-bottom: 15px;
-    }
-
-    .card-side & {
-      color: $color-main;
     }
 
     .card-hobbies & {

@@ -25,14 +25,6 @@
     @include flex(center, center);
   }
 
-  .hero .form & {
-    margin-top: 30px;
-  }
-
-  .footer &-wrap {
-    width: 100%;
-  }
-
   &-reverse {
 
     &:hover {
