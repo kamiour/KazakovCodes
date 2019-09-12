@@ -117,6 +117,28 @@
     margin-left: 25px;
     border: $element-border;
 
+    & .label {
+      display: inline-block;
+      padding: 4px 6px;
+      border-radius: 7px;
+      color: $color-main;
+      @include font(10px, 400, 1);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+
+      &.level-up {
+        background-color: $color-secondary;
+      }
+
+      &.new {
+        background-color: $color-completed;
+      }
+    }
+
+    & .experience-link {
+      color: lighten($color-additional-dark, 20%);
+    }
+
     &.card-promotion, &.card-side {
       margin-left: 60px;
 
@@ -183,7 +205,7 @@
       @include overlay(1, darken($color-overlay, 15%), 0.6);
     }
   }
-  
+
   &-title {
     width: 100%;
     margin: 0;
@@ -239,8 +261,8 @@
 
     .card-experience & {
       text-align: left;
-      @include font(14px, 600, 24px);
-      margin-bottom: 5px;
+      @include font(13px, 600, 22px);
+      margin-bottom: 15px;
     }
 
     .card-side & {
@@ -272,8 +294,9 @@
     }
 
     .section-experience & {
-      color: $color-additional-dark;
-      margin-bottom: 10px;
+      color: lighten($color-additional-dark, 20%);
+      margin-bottom: 5px;
+      text-align: left;
     }
   }
 
@@ -300,8 +323,9 @@
     }
 
     .card-experience & {
+      @include font(12px, 400, 20px);
       text-align: left;
-      color: $color-additional;
+      color: $color-additional-light;
     }
 
     .card-portfolio & {
