@@ -17,7 +17,7 @@
   }
 
   & > li {
-    @include font(14px, 300, 18px);
+    @include font(14px, 300, 20px);
     color: $color-main;
     text-align: left;
     margin: 0;
@@ -25,19 +25,19 @@
     padding: 0;
     padding-left: 25px;
 
-    &:last-child {
-      margin-bottom: 0;
-    }
-
     .section-story & {
       margin-bottom: 18px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
   
 .list-item::before {
   display: inline-block;
-  width: 28px;
+  width: 26px;
   padding-right: 10px;
   margin-left: -25px;
   vertical-align: text-top;
