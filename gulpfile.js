@@ -20,14 +20,16 @@ var gulp = require('gulp'),
           js: 'docs/js/',
           css: 'docs/css/',
           img: 'docs/images/',
-          fonts: 'docs/fonts/'
+          fonts: 'docs/fonts/',
+          ico: 'docs/'
         },
         src: { //Пути откуда брать исходники
           html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
           js: 'src/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
           style: 'src/scss/main.scss',
           img: 'src/images/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
-          fonts: 'src/fonts/**/*.*'
+          fonts: 'src/fonts/**/*.*',
+          ico: 'src/*.ico'
         },
         watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
           html: 'src/**/*.html',
@@ -80,6 +82,11 @@ gulp.task('style:build', async function () {
 gulp.task('fonts:build', async function() {
     gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts))
+});
+
+gulp.task('ico:build', async function() {
+  gulp.src(path.src.ico)
+      .pipe(gulp.dest(path.build.ico))
 });
 
 
@@ -138,6 +145,7 @@ gulp.task('build', gulp.series(
   'js:build',
   'style:build',
   'fonts:build',
+  'ico:build',
   'image:build'
 ));
 
