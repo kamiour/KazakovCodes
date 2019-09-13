@@ -44,10 +44,17 @@
 
   &-body {
     .section-experience & {
+
       @media screen and (min-width: 480px) {
         max-width: 650px;
         margin: 0 auto;
       }
+
+      @media screen and (min-width: 640px) {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      
     }
   }
 

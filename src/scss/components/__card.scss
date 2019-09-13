@@ -150,6 +150,11 @@
         @include font(11px, 400, 1);
       }
 
+      @media screen and (min-width: 960px) {
+        @include font(11px, 400, 1);
+        margin-bottom: 6px;
+      }
+
       &.level-up {
         background-color: $color-secondary;
       }

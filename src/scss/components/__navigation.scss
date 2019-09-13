@@ -1,6 +1,6 @@
 .header-navigation {
   display: none;
-  @include font(12px, 600, 18px);
+  @include font(12px, 400, 18px);
   @include spacing(4px);
 
   @media screen and (min-width: 640px) {
@@ -10,7 +10,7 @@
   }
 
   @media screen and (min-width: 960px) {
-    @include font(14px, 600, 20px);
+    @include font(14px, 400, 20px);
     @include spacing(6px);
   }
 }
