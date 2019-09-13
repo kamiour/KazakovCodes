@@ -51,6 +51,12 @@
           height: 30px;
           padding: 4px;
         }
+
+        @media screen and (min-width: 480px) {
+          width: 45px;
+          height: 45px;
+          padding: 8px;
+        }
       } 
     }
 
@@ -64,6 +70,10 @@
 
       @media screen and (min-width: 480px) {
         padding: 7px;
+      }
+
+      @media screen and (min-width: 640px) {
+        padding: 12px;
       }
 
       @media screen and (min-width: 960px) {
@@ -94,6 +104,12 @@
       padding: 15px;
     }
 
+    @media screen and (min-width: 960px) {
+      flex-direction: column;
+      @include spacing(0px);
+      padding: 18px;
+    }
+
     &:hover {
       transform: scale(1.05);
     }
@@ -116,6 +132,10 @@
     background-color: $color-card-hover;
     margin-left: 25px;
     border: $element-border;
+
+    @media screen and (min-width: 640px) {
+      padding: 15px 15px;
+    }
 
     & .label {
       display: inline-block;
@@ -249,7 +269,8 @@
       }
 
       @media screen and (min-width: 960px) {
-        @include font(17px, 600, 24px);
+        @include font(18px, 600, 26px);
+        margin-bottom: 15px;
       }
     }
 
@@ -261,6 +282,11 @@
       @media screen and (min-width: 480px) {
         @include font(14px, 600, 24px);
         margin-bottom: 10px;
+      }
+
+      @media screen and (min-width: 480px) {
+        @include font(15px, 600, 25px);
+        margin-bottom: 12px;
       }
     }
 
@@ -313,7 +339,7 @@
       }
 
       @media screen and (min-width: 960px) {
-        @include font(15px, 400, 24px);
+        @include font(14px, 400, 24px);
       }
     }
 
@@ -325,6 +351,10 @@
       @media screen and (min-width: 480px) {
         @include font(13px, 400, 22px);
       }
+
+      @media screen and (min-width: 480px) {
+        @include font(14px, 400, 24px);
+      }
     }
 
     .card-portfolio & {
@@ -333,6 +363,10 @@
 
       @media screen and (min-width: 480px) {
         @include font(10px, 400, 1.4);
+      }
+
+      @media screen and (min-width: 640px) {
+        @include font(12px, 400, 1.6);
       }
     }
   }

@@ -4,23 +4,19 @@
   @include spacing(4px);
 
   @media screen and (min-width: 640px) {
-    & {
-      @include flex(center, center);
-      flex-wrap: wrap;
-      @include font(14px, 400, 1.4);
-    }
+    @include flex(center, center);
+    flex-wrap: wrap;
+    @include spacing(2px);
   }
 
   @media screen and (min-width: 960px) {
-    & {
-      @include spacing(10px);
-    }
+    @include font(14px, 600, 20px);
+    @include spacing(6px);
   }
 }
 
 .nav-wrap {
   @include flex(center, center);
-  margin: 4px 0;
 }
   
 .nav-item {
@@ -38,12 +34,12 @@
   }
 
   &.isactive {
-    color: $color-secondary;
-    border: 2px solid $color-secondary;
+    color: $color-reverse;
+    border: $element-border;
 
     &:hover {
-      color: $color-secondary;
-      border: 2px solid $color-secondary;
+      color: $color-reverse;
+      border: $element-border;
     }
   }
 
