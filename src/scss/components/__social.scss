@@ -48,7 +48,7 @@
   }
 
   .footer &-size {
-    @include wrap(30px, 30px, 5px, 50%);
+    @include wrap(26px, 26px, 4px, 50%);
     background-color: $color-button;
     border: $element-border;
     @include flex(center, center);
