@@ -15,6 +15,7 @@
 
     &-left {
       @include flex(left, center);
+      width: 100%;
     }
     
     &-right {
