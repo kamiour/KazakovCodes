@@ -1,24 +1,31 @@
 .footer {
-    padding: 20px 0;
-    background-color: $color-bg-black;
+  padding: 20px 0;
+  background-color: $color-bg-black;
+
+  @media screen and (min-width: 480px) {
+    padding: 30px 0;
+  }
+
+  &-layout {
+      @include flex(space-between, stretch);
+      @include spacing(9px);
+      padding: 0;
+  }
+
+  &-left {
+    @include flex(left, center);
+    width: 100%;
+  }
+  
+  &-right {
+    @include flex(right, center);
+  }
+
+  .logo-name-wrap {
+    max-width: 130px;
 
     @media screen and (min-width: 480px) {
-      padding: 25px 0;
+      max-width: 150px;
     }
-
-
-    &-layout {
-        @include flex(space-between, stretch);
-        @include spacing(9px);
-        padding: 0;
-    }
-
-    &-left {
-      @include flex(left, center);
-      width: 100%;
-    }
-    
-    &-right {
-      @include flex(right, center);
-    }  
   }
+}

@@ -2,6 +2,18 @@
   margin-top: 20px;
   box-shadow: 0 8px 28px rgba(0,0,0,0.3);
   border-radius: 10px;
+
+  @media screen and (min-width: 480px) {
+    width: 80%;
+  }
+
+  @media screen and (min-width: 640px) {
+    width: 70%;
+  }
+
+  @media screen and (min-width: 960px) {
+    width: 60%;
+  }
 }
 
 .swiper-wrapper {
@@ -22,6 +34,10 @@
   &-wrap {
     @include flex(center, center);
     height: 100%;
+  }
+
+  .section-development & {
+    width: 100%;
   }
 
   .section-story & {

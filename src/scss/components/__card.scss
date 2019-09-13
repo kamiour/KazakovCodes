@@ -45,6 +45,12 @@
         padding: 8px;
         margin: 0;
         background-color: $color-label-hover;
+
+        @media screen and (min-width: 480px) {
+          width: 30px;
+          height: 30px;
+          padding: 4px;
+        }
       } 
     }
 
@@ -57,16 +63,12 @@
       background-color: rgba(0, 0, 0, 0.8);
 
       @media screen and (min-width: 480px) {
-        & {
-          padding: 7px;
-        }
+        padding: 7px;
       }
 
       @media screen and (min-width: 960px) {
-        & {
-          padding: 15px;
-          @include flex(left, center);
-        }
+        padding: 15px;
+        @include flex(left, center);
       }
 
       .portfolio-link {
@@ -89,6 +91,7 @@
     @media screen and (min-width: 480px) {
       flex-direction: column;
       @include spacing(0px);
+      padding: 15px;
     }
 
     &:hover {
@@ -122,6 +125,10 @@
       @include font(10px, 400, 1);
       text-transform: uppercase;
       margin-bottom: 4px;
+
+      @media screen and (min-width: 480px) {
+        @include font(11px, 400, 1);
+      }
 
       &.level-up {
         background-color: $color-secondary;
@@ -215,21 +222,15 @@
     }
 
     @media screen and (min-width: 480px) {
-      & {
-        @include font(17px, 600, 26px);
-      }
+      @include font(17px, 600, 26px);
     }
 
     @media screen and (min-width: 640px) {
-      & {
-        @include font(18px, 600, 28px);
-      }
+      @include font(18px, 600, 28px);
     }
 
     @media screen and (min-width: 960px) {
-      & {
-        @include font(18px, 600, 28px);
-      }
+      @include font(18px, 600, 28px);
     }
 
     .section-reverse & {
@@ -244,6 +245,7 @@
       @media screen and (min-width: 480px) {
         @include font(15px, 600, 24px);
         text-align: center;
+        margin-bottom: 10px;
       }
 
       @media screen and (min-width: 960px) {
@@ -255,6 +257,11 @@
       text-align: left;
       @include font(13px, 600, 22px);
       margin-bottom: 15px;
+
+      @media screen and (min-width: 480px) {
+        @include font(14px, 600, 24px);
+        margin-bottom: 10px;
+      }
     }
 
     .card-hobbies & {
@@ -314,11 +321,19 @@
       @include font(12px, 400, 20px);
       text-align: left;
       color: $color-additional-light;
+
+      @media screen and (min-width: 480px) {
+        @include font(13px, 400, 22px);
+      }
     }
 
     .card-portfolio & {
       color: $color-additional-light;
       @include font(12px, 400, 1.6);
+
+      @media screen and (min-width: 480px) {
+        @include font(10px, 400, 1.4);
+      }
     }
   }
 

@@ -25,7 +25,8 @@
     flex-direction: column;
     height: 370px;
     margin-bottom: 35px;
-    max-width: 230px;
+    width: max-content;
+    padding: 0;
 
     & > * {
       width: 100%;
@@ -101,17 +102,13 @@
       text-transform: uppercase;
 
       @media screen and (min-width: 480px) {
-        & {
-          @include font(25px, 600, 44px);
-          margin-bottom: 40px;
-        }
+        @include font(25px, 600, 44px);
+        margin-bottom: 40px;
       }
 
       @media screen and (min-width: 960px) {
-        & {
-          @include font(36px, 700, 42px);
-          margin-bottom: 31px;
-        }
+        @include font(36px, 700, 42px);
+        margin-bottom: 31px;
       }
     }
 

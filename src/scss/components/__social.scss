@@ -11,6 +11,10 @@
   .footer & {
     @include flex(left, center);
     @include spacing(3px);
+
+    @media screen and (min-width: 480px) {
+      @include spacing(4px);
+    }
   }
 
   & > li {
@@ -31,12 +35,8 @@
       background-color: $color-secondary;
     }
 
-    @media screen and (min-width: 480px) {
-      @include wrap(25px, 25px, 5px, 50%);
-    }
-
     @media screen and (min-width: 640px) {
-      @include wrap(30px, 30px, 6px, 50%);
+      @include wrap(42px, 42px, 10px, 50%);
     }
   }
 
@@ -52,6 +52,10 @@
     background-color: $color-button;
     border: $element-border;
     @include flex(center, center);
+
+    @media screen and (min-width: 480px) {
+      @include wrap(30px, 30px, 5px, 50%);
+    }
 
     &:hover {
       background-color: $color-secondary;

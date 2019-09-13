@@ -105,17 +105,13 @@
     margin: 0;
     text-align: left;
 
-    @media screen and (min-width: 640px) {
-      & {
-        @include font(15px, 400, 26px);
-      }
+    @media screen and (min-width: 480px) {
+      @include font(16px, 400, 26px);
     }
 
     @media screen and (min-width: 960px) {
-      & {
-        @include font(16px, 400, 26px);
-        margin: 0;
-      }
+      @include font(18px, 400, 28px);
+      margin: 0;
     }
 
     .section-portfolio & {
