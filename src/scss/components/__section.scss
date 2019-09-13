@@ -49,6 +49,10 @@
     flex-direction: column;
     margin-top: 30px;
 
+    @media screen and (min-width: 480px) {
+      margin-top: 35px;
+    }
+
     .section-experience & {
       margin-bottom: 20px;
     }
@@ -63,23 +67,17 @@
     text-align: left;
 
     @media screen and (min-width: 480px) {
-      & {
-        margin-bottom: 42px;
-      }
+      margin-bottom: 55px;
     }
 
     @media screen and (min-width: 640px) {
-      & {
-        @include font(28px, 700, 38px);
-        margin-bottom: 50px;
-      }
+      @include font(28px, 700, 38px);
+      margin-bottom: 50px;
     }
 
     @media screen and (min-width: 960px) {
-      & {
-        @include font(36px, 700, 36px);
-        margin-bottom: 63px;
-      }
+      @include font(36px, 700, 36px);
+      margin-bottom: 63px;
     }
 
     &.title-reverse {
@@ -116,6 +114,10 @@
 
     .section-portfolio & {
       text-align: center;
+
+      @media screen and (min-width: 480px) {
+        margin-top: 20px;
+      }
     }
   }
 
@@ -161,6 +163,10 @@
 
   .section-portfolio & {
     margin-bottom: 30px;
+
+    @media screen and (min-width: 480px) {
+      margin-bottom: 16px;
+    }
   }
 
   .section-experience & {

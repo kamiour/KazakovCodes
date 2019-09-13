@@ -32,9 +32,8 @@
       width: 100%;
     }
 
-    @media screen and (min-width: 640px) {
-      max-width: 650px;
-      margin: 0;
+    @media screen and (min-width: 480px) {
+      margin-bottom: 40px;
     }
   }
 
@@ -95,7 +94,7 @@
     }
 
     .hero-title {
-      @include font(18px, 600, 30px);
+      @include font(20px, 600, 30px);
       margin-top: 0;
       margin-bottom: 20px;
       color: $color-reverse;
@@ -103,7 +102,7 @@
 
       @media screen and (min-width: 480px) {
         @include font(25px, 600, 44px);
-        margin-bottom: 40px;
+        margin-bottom: 30px;
       }
 
       @media screen and (min-width: 960px) {
