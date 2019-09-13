@@ -160,7 +160,7 @@ gulp.task('watch', function(done){
   gulp.watch([path.watch.style], gulp.series('style:build')),
   gulp.watch([path.watch.js], gulp.series('js:build')),
   gulp.watch([path.watch.img], gulp.series('image:build')),
-  gulp.watch([path.watch.fonts], gulp.series('fonts:build')),
+  gulp.watch([path.watch.fonts], gulp.series('fonts:build'))
   done();
 });
 
