@@ -10,6 +10,7 @@ $(document).ready(function(){
   //= components/nav-item.js
   //= components/button-scroll.js
   //= components/tab.js
+  //= components/sticky-header.js
 })
 
 /*

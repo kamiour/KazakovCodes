@@ -75,7 +75,12 @@
     padding: 8px;
     margin: 0;
     width: 135px;
-    border-radius: 3px;
+    border-radius: 5px;
+
+    &.ul-sticky {
+      top: 105%;
+      box-shadow: 0 0 12px rgba(255,255,255,.6);
+    }
 
     &.is-open {
       display: block;
