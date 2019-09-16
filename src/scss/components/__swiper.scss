@@ -17,6 +17,23 @@
   }
 }
 
+.swiperdev-controls .swiper-slide {
+  opacity: 0.6;
+
+  &.swiper-slide-thumb-active {
+    opacity: 1;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+}
+
 .swiper-wrapper {
   .section-story & {
     background-color: $color-additional-light;
