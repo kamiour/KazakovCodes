@@ -21,6 +21,11 @@ $cornerwidth: 80px;
   width: 0;
   border-width: 0 $cornerwidth $cornerwidth 0;
 
+  &.ongoing {
+    border-color: transparent $color-ongoing transparent transparent;
+    border-color: rgba(255, 255, 255, 0) $color-ongoing rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+  }
+
   &.next {
     border-color: transparent $color-secondary transparent transparent;
     border-color: rgba(255, 255, 255, 0) $color-secondary rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
