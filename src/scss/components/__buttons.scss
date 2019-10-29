@@ -7,6 +7,8 @@
   outline: none;
   transition-duration: 0.3s;
   width: 170px;
+  font-family: inherit;
+  cursor: pointer;
 
   &:hover {
     @include button($color-reverse, $color-secondary, 10px, 6px, none, 5px, uppercase);
