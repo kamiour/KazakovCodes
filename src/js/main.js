@@ -10,6 +10,7 @@ $(document).ready(function(){
   //= components/button-scroll.js
   //= components/tab.js
   //= components/sticky-header.js
+  //= components/rellax.js
 })
 
 /*
