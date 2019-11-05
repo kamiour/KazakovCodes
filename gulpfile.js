@@ -1,9 +1,9 @@
 'use strict';
 
-var gulp = require('gulp'),
+let gulp = require('gulp'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
-    uglify = require('gulp-uglify'),
+    uglify = require('gulp-uglifyes'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
@@ -14,14 +14,15 @@ var gulp = require('gulp'),
     browserSync = require("browser-sync"),
     reload = browserSync.reload;
 
-    var path = {
+    let path = {
         build: { //Тут мы укажем куда складывать готовые после сборки файлы
           html: 'docs/',
           js: 'docs/js/',
           css: 'docs/css/',
           img: 'docs/images/',
           fonts: 'docs/fonts/',
-          ico: 'docs/'
+          ico: 'docs/',
+          language: 'docs/language/'
         },
         src: { //Пути откуда брать исходники
           html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
@@ -29,19 +30,21 @@ var gulp = require('gulp'),
           style: 'src/scss/main.scss',
           img: 'src/images/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
           fonts: 'src/fonts/**/*.*',
-          ico: 'src/*.ico'
+          ico: 'src/*.ico',
+          language: 'src/language/*.*'
         },
         watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
           html: 'src/**/*.html',
           js: 'src/js/**/*.js',
           style: 'src/scss/**/*.scss',
           img: 'src/images/**/*.*',
-          fonts: 'src/fonts/**/*.*'
+          fonts: 'src/fonts/**/*.*',
+          language: 'src/language/*.*'
         },
         clean: './docs'
   };
 
-  var config = {
+  let config = {
       server: {
           baseDir: "./docs"
       },
@@ -62,7 +65,10 @@ gulp.task('js:build', async function () {
   gulp.src(path.src.js) //Найдем наш main файл
       .pipe(rigger()) //Прогоним через rigger
       .pipe(sourcemaps.init()) //Инициализируем sourcemap
-      .pipe(uglify()) //Сожмем наш js
+      .pipe(uglify({ 
+        mangle: false, 
+        ecma: 6 
+      })) //Сожмем наш js
       .pipe(sourcemaps.write()) //Пропишем карты
       .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
       .pipe(reload({stream: true})); //И перезагрузим сервер
@@ -89,15 +95,18 @@ gulp.task('ico:build', async function() {
       .pipe(gulp.dest(path.build.ico))
 });
 
+gulp.task('lang:build', async function() {
+  gulp.src(path.src.language)
+      .pipe(gulp.dest(path.build.language))
+});
+
 
 //compressing all images
 
-var cache = require('gulp-cache');
-var imagemin = require('gulp-imagemin');
-var imageminPngquant = require('imagemin-pngquant');
-var imageminZopfli = require('imagemin-zopfli');
-var imageminMozjpeg = require('imagemin-mozjpeg'); //need to run 'brew install libpng'
-var imageminGiflossy = require('imagemin-giflossy');
+let cache = require('gulp-cache');
+let imageminPngquant = require('imagemin-pngquant');
+let imageminZopfli = require('imagemin-zopfli');
+let imageminMozjpeg = require('imagemin-mozjpeg'); //need to run 'brew install libpng'
 
 gulp.task('image:build', async function() {
   return gulp.src(path.src.img)
@@ -112,16 +121,11 @@ gulp.task('image:build', async function() {
               // iterations: 50 // very slow but more effective
           }),
           //gif
-          // imagemin.gifsicle({
-          //     interlaced: true,
-          //     optimizationLevel: 3
-          // }),
-          //gif very light lossy, use only one of gifsicle or Giflossy
-          imageminGiflossy({
-              optimizationLevel: 3,
-              optimize: 3, //keep-empty: Preserve empty transparent frames
-              lossy: 2
+          imagemin.gifsicle({
+            interlaced: true,
+            optimizationLevel: 3
           }),
+
           //svg
           imagemin.svgo({
               plugins: [{
@@ -146,6 +150,7 @@ gulp.task('build', gulp.series(
   'style:build',
   'fonts:build',
   'ico:build',
+  'lang:build',
   'image:build'
 ));
 
@@ -160,7 +165,8 @@ gulp.task('watch', function(done){
   gulp.watch([path.watch.style], gulp.series('style:build')),
   gulp.watch([path.watch.js], gulp.series('js:build')),
   gulp.watch([path.watch.img], gulp.series('image:build')),
-  gulp.watch([path.watch.fonts], gulp.series('fonts:build'))
+  gulp.watch([path.watch.fonts], gulp.series('fonts:build')),
+  gulp.watch([path.watch.language], gulp.series('lang:build'))
   done();
 });
 
