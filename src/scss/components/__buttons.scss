@@ -123,6 +123,7 @@
   @include button($color-reverse, $color-secondary, 10px, 10px, none, 5px, uppercase);
   border: none;
   cursor: pointer;
+  height: 38px;
   animation: blink 2.5s infinite;
       
   @keyframes blink {
