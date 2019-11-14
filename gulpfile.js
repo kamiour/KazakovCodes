@@ -21,8 +21,7 @@ let gulp = require('gulp'),
           css: 'docs/css/',
           img: 'docs/images/',
           fonts: 'docs/fonts/',
-          ico: 'docs/',
-          manifest: 'docs/',
+          root: 'docs/',
           manifestImages: 'docs/manifest/',
           language: 'docs/language/'
         },
@@ -32,8 +31,7 @@ let gulp = require('gulp'),
           style: 'src/scss/main.scss',
           img: 'src/images/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
           fonts: 'src/fonts/**/*.*',
-          ico: 'src/*.ico',
-          manifest: 'src/manifest.json',
+          root: 'src/*.*',
           manifestImages: 'src/manifest/*.*',
           language: 'src/language/*.*'
         },
@@ -94,14 +92,9 @@ gulp.task('fonts:build', async function() {
         .pipe(gulp.dest(path.build.fonts))
 });
 
-gulp.task('ico:build', async function() {
-  gulp.src(path.src.ico)
-      .pipe(gulp.dest(path.build.ico))
-});
-
-gulp.task('manifest:build', async function() {
-  gulp.src(path.src.manifest)
-      .pipe(gulp.dest(path.build.manifest))
+gulp.task('root:build', async function() {
+  gulp.src(path.src.root)
+      .pipe(gulp.dest(path.build.root))
 });
 
 gulp.task('lang:build', async function() {
@@ -163,9 +156,8 @@ gulp.task('build', gulp.series(
   'js:build',
   'style:build',
   'fonts:build',
-  'ico:build',
+  'root:build',
   'lang:build',
-  'manifest:build',
   'manifestImages:build',
   'image:build'
 ));
