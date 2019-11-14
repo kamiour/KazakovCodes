@@ -22,6 +22,8 @@ let gulp = require('gulp'),
           img: 'docs/images/',
           fonts: 'docs/fonts/',
           ico: 'docs/',
+          manifest: 'docs/',
+          manifestImages: 'docs/manifest/',
           language: 'docs/language/'
         },
         src: { //Пути откуда брать исходники
@@ -31,6 +33,8 @@ let gulp = require('gulp'),
           img: 'src/images/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
           fonts: 'src/fonts/**/*.*',
           ico: 'src/*.ico',
+          manifest: 'src/manifest.json',
+          manifestImages: 'src/manifest/*.*',
           language: 'src/language/*.*'
         },
         watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
@@ -95,9 +99,19 @@ gulp.task('ico:build', async function() {
       .pipe(gulp.dest(path.build.ico))
 });
 
+gulp.task('manifest:build', async function() {
+  gulp.src(path.src.manifest)
+      .pipe(gulp.dest(path.build.manifest))
+});
+
 gulp.task('lang:build', async function() {
   gulp.src(path.src.language)
       .pipe(gulp.dest(path.build.language))
+});
+
+gulp.task('manifestImages:build', async function() {
+  gulp.src(path.src.manifestImages)
+      .pipe(gulp.dest(path.build.manifestImages))
 });
 
 
@@ -151,6 +165,8 @@ gulp.task('build', gulp.series(
   'fonts:build',
   'ico:build',
   'lang:build',
+  'manifest:build',
+  'manifestImages:build',
   'image:build'
 ));
 
