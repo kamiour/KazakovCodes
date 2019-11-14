@@ -14,6 +14,8 @@ $(document).ready(function(){
   //= components/sw-trigger.js
 })
 
+//= components/a2hs.js
+
 /*
  * Custom
  */

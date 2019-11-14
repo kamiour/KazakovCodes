@@ -113,3 +113,22 @@
   transition-duration: 1s;
   transform: rotate(180deg);
 }
+
+.a2hs-button {
+  position: absolute;
+  @include font(12px, 400, 18px);
+  z-index: 5;
+  right: 20px;
+  top: 40px;
+  @include button($color-reverse, $color-secondary, 10px, 10px, none, 5px, uppercase);
+  border: none;
+  cursor: pointer;
+  animation: blink 2.5s infinite;
+      
+  @keyframes blink {
+    60% {
+      box-shadow: 0 0 0 20px rgba(255,255,255,.1);
+      opacity: 1;
+    }
+  }
+}
