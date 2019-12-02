@@ -12,6 +12,7 @@ $(document).ready(function(){
   //= components/sticky-header.js
   //= components/rellax.js
   //= components/sw-trigger.js
+  //= components/hero-rotate.js
 })
 
 //= components/a2hs.js
