@@ -2,7 +2,7 @@
  * Third party
  */
 
-$(document).ready(function(){
+$(document).ready(function () {
   //= components/swipers.js
   //= components/burger.js
   //= components/button-expand.js
@@ -13,9 +13,7 @@ $(document).ready(function(){
   //= components/rellax.js
   //= components/sw-trigger.js
   //= components/hero-rotate.js
-})
-
-//= components/a2hs.js
+});
 
 /*
  * Custom

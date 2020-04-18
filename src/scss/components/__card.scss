@@ -36,7 +36,7 @@
       width: 100%;
       @include flex(center, center);
       flex-grow: 1;
-      
+
       .figure-plus {
         width: 45px;
         height: 45px;
@@ -57,7 +57,7 @@
           height: 45px;
           padding: 8px;
         }
-      } 
+      }
     }
 
     .card-foreground-footer {
@@ -93,7 +93,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     background-color: $color-reverse;
-    box-shadow: 0 8px 28px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     transition-duration: 0.3s;
     @include spacing(8px);
@@ -116,7 +116,7 @@
 
     .card-media {
       margin: 0 auto;
-      max-width: 55px;
+      max-width: 65px;
 
       @media screen and (min-width: 480px) {
         margin-bottom: 15px;
@@ -178,7 +178,7 @@
         height: calc(50% + 25px);
         top: 50%;
         display: inline-block;
-        content: '';
+        content: "";
         border-top: $element-border;
         border-left: $element-border;
         border-top-left-radius: 5px;
@@ -191,7 +191,7 @@
         height: calc(50% + 20px);
         bottom: calc(50% + -5px);
         display: inline-block;
-        content: '';
+        content: "";
         border-left: $element-border;
       }
 
@@ -202,7 +202,7 @@
         height: calc(50% + 20px);
         bottom: calc(50% + -5px);
         display: inline-block;
-        content: '';
+        content: "";
         border-left: $element-border;
       }
 
@@ -213,7 +213,7 @@
         height: calc(50% + 25px);
         top: 50%;
         display: inline-block;
-        content: '';
+        content: "";
         border-left: $element-border;
       }
     }
@@ -225,18 +225,18 @@
       height: 108%;
     }
   }
-  
+
   &-background {
     margin: 0;
     width: 100%;
   }
-  
+
   &-foreground {
     @include overlay(2, transparent, 1);
     @include flex(center, center);
     display: none;
   }
-  
+
   &-overlay {
     @include overlay(1, $color-overlay, 0.5);
     display: none;
@@ -351,7 +351,7 @@
   &-description {
     text-align: center;
     margin-top: 0;
-    
+
     .section-reverse & {
       color: $color-additional-light;
     }
@@ -403,7 +403,8 @@
   }
 
   &:hover {
-    .card-overlay, &:hover .card-foreground {
+    .card-overlay,
+    &:hover .card-foreground {
       @include flex(center, center);
       flex-direction: column;
     }
